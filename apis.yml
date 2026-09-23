@@ -1,23 +1,68 @@
 aid: ajaxhealth
+
 name: Ajaxhealth
-description: 'Ajaxhealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://ajaxhealth.com/wp-content/uploads/team-cta.png
+
+description: 'Ajaxhealth is a global investment firm focused on building and scaling high-quality healthcare businesses. It partners with industry leaders to innovate in medical technology, supporting companies through growth capital and strategic guidance. The firm operates across multiple locations including Menlo Park, New York, Austin, and Los Angeles, and engages in activities such as investing, mentorship, and fostering collaborations to advance healthcare solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ajaxhealth/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
+- Investment
+- Healthcare
+- MedTech
+- VentureCapital
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ajaxhealth-hosts.yml
+- type: Vendors
+  url: vendors/ajaxhealth-vendors.yml
+- type: PrivacyPolicy
+  url: https://ajaxhealth.com/privacy-notice/
+- type: Newsroom
+  url: https://ajaxhealth.com/news/
+- type: Leadership
+  url: https://ajaxhealth.com/team/
+- type: DomainSecurity
+  url: security/ajaxhealth-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ajaxhealth
+  url: https://ajaxhealth.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Home page provides no machine-readable API specification or documentation.
+  evidence:
+    - url: https://ajaxhealth.com
+      status: 200
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
